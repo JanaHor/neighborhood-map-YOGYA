@@ -40,10 +40,6 @@ class Map extends Component {
         })
     }
 
-    gm_authFailure = () => {
-        alert("Not possible to get Google Map!")
-    };
-
     render() {
         this.matchMarkers()
         return ( <

@@ -9,8 +9,10 @@ export default function getFoursquareData(id, infowindow) {
         })
         .then((info) => {
             infowindow.setContent(
-                `<div class="info-name">${info.response.venue.name}</div>
+                `<div class="info-name" tabindex="0">${info.response.venue.name}</div>
 				<div class="info-address">${info.response.venue.location.crossStreet}</div>
+				<div class="info"><span class="info-phone">Tel.:</span> ${info.response.venue.contact.formattedPhone}</div>
+				<div class="info"><span class="info-twitter">twitter:</span> ${info.response.venue.contact.twitter}</div>
          `)
         })
         .catch(() => {

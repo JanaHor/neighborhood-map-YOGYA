@@ -128,9 +128,16 @@ class App extends Component {
         var script = window.document.createElement("script");
         script.src = src;
         script.async = true;
+		script.onerror = function() {
+		alert("Error loading " + this.src);
+};
         ref.parentNode.insertBefore(script, ref);
     }
 
+	gm_authFailure = () => {
+        alert("Not possible to get Google Map!")
+    };
+	
     render() {
         return ( 
 			<div className = "app">

@@ -53,6 +53,7 @@ class PlacesList extends Component {
                         location.title
                     }
                     className = "locations"
+					role = "button"
                     tabIndex = "0"
                     onClick = {
                         (e) => {
